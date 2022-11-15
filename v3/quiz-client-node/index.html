@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div name="question" class="col-md-8">
+                <span id="clientid">Client 0</span>
+                <div>
+                    <span id="txttimer">00:00:00</span>
+                </div>
+                <div>
+                    <span id="txtquestionNumber">Question</span>
+                    <div class="bg-light p-3 rounded-4" style="height: 200px;"">
+                        <span id="txtquestion"></span>
+                    </div>
+                </div>
+                <div>
+                    <form action="/next" id="form_id" class="py-3">
+                        <label for="answer" class="form-label">Choose an answer</label><br>
+                        <input type="radio" class="btn-check" id="A" value="a" name="answer" />
+                        <label class="btn btn-outline-primary my-3" for="A">A</label>
+                        <input type="radio" class="btn-check" id="B" value="b" name="answer" />
+                        <label class="btn btn-outline-primary my-3" for="B">B</label>
+                        <input type="radio" class="btn-check" id="C" value="c" name="answer" />
+                        <label class="btn btn-outline-primary my-3" for="C">C</label>
+                        <input type="radio" class="btn-check" id="D" value="d" name="answer" />
+                        <label class="btn btn-outline-primary my-3" for="D">D</label>
+                        <br>
+                        <input class="btn btn-primary" type="submit" value="Next">
+                    </form>
+                </div>
+                <div>
+                    <span id="message"></span>
+                </div>
+            </div>
+            <div name="rank" class="col-md">
+                <br><br>
+                <span>Rank</span>
+                <div class="bg-light p-3 rounded-4">
+                    <p id="txtrank"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="completedModel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Completed</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/bootstrap@latest/dist/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
